@@ -1,103 +1,316 @@
-# JAVASCRIPT NOTES
+# Javascript Notes
+
+## Variables
+
+- KEYWORD: "let"
+- VARIABLES are used to store DATA temparily inside a computers memory.
+
+```js
+let variable = "Data";
+```
+
+Rules for naming variables:
+
+1. Cannot be a reserved keyword (if, let, var ...)
+2. Should be meaninful (they must be descriptive of what you are trying to store)
+3. Cannot start with a number (EX: 1name, 3stores, etc.)
+   Cannot contain a space or hyphen(-) all words must be connected
+4. first word of the variable must be lower case and every word after must have first letter capitalized. (firstName, lastName)
+
+If you want to declare multiple variables, its best practice to write them on their own line.
+
+```js
+let firstName = "Adrian";
+let lastName = "Garay";
+```
 
 ---
 
-# Arrays
+## Constants
 
-an ARRAY is ussed to store a group of OBJECTS.
-EX: storing a list of products in a shopping list
+KEYWORD: "const"
+
+- If we dont want DATA inside a VARIABLE to every change or be altered, we use "const" instead of "let".
 
 ```js
-let variable = []; // "[]" is an ARRAY LITERAL, indicates an empty array.
+let interestRate = 0.3;
+interestRate = 1;
+console.log(interestRate);
+```
+
+<strong>OUTPUT</strong>: 1 <- the new value of the variable changed to 1.
+
+```js
+const interestRate = 0.3;
+interstRate = 1;
+console.log(interestRate);
+```
+
+<strong>OUTPUT:</strong> TypeError: line 3 <- we cannot reasign a CONSTANT.
+
+\*\* IN THE REAL WORLD IF WE DO NOT NEED TO REASIGN A VARIABLE WE USE "const", OTHERWISE USE "let"
+
+---
+
+## Primitive types
+
+### 2 category of types that can be assigned to a variable
+
+## Primitives / Value Types
+
+1. "strings"
+   - any value encased by quotes " "
+
+```js
+let variable = "Data";
+```
+
+2. Numbers
+   - numbers do not need quotes
+
+```js
+let variable = 1;
+```
+
+3. Booleans
+   - ONLY 2 possible values are booleans: true / false
+
+```js
+let variable = true;
+let variable = false;
+```
+
+4. Undefined
+   - by default, all variables are set to Undefined until given a value.
+
+```js
+let variable = undefined;
+```
+
+5. Null
+   - When we want to clear the value of a variable we use NULL.
+
+```js
+let variable = null;
+```
+
+---
+
+## Dynamic Typing
+
+KEYWORD: <span style="color:red;">typeof</span>
+
+- JavaScript is a dynamic language
+  - When a variable is set, we can change the value inside a value during runtime.
+
+```js
+let variable = "Data";
+```
+
+if we attempt to check in our console the value type using type of we will get "string"
+
+```js
+typeof variable;
+```
+
+OUTPUT: "string"
+
+Now if we change the value to something other than a "string" we will get a new output for our type.
+
+```js
+let variable = "data";
+variable = 1;
+typeof variable;
+```
+
+OUTPUT: "number" <- the value of our variable was changed from a string to a number.
+
+\*\* "typeof" will return one of our 5 value types:
+
+1. "string"
+2. "number"
+3. "boolean"
+4. "undefined"
+5. (null) "object"
+
+---
+
+# OBJECT
+
+- An OBJECT is a collection of multiple related VARIABLES
+- Instead of having multiple variables we can group them together and then call on the "object.key". this helps write cleaner code.
+- {} is known as a object literal
+- The properties inside an object are called KEYS.
+-
+
+```js
+let object = {
+  key: "value-one",
+  secondKey: "value-two",
+};
+
+console.log(object);
+
+let person = {
+  name: "Adrian",
+  age: "30",
+};
+
+console.log(person);
+```
+
+OUTPUT: {name: "Adrian", age: 30}
+
+- to call on a KEY we need to call on the name property.
+
+```js
+// to access the property name we need to call on the object.key
+
+let person = {
+  name: "Adrian",
+  age: 30,
+};
+
+console.log(person.age);
+console.log(person.name);
+```
+
+OUTPUT: 30
+s
+OUTPUT: Adrian
+
+- ## THERE ARE TWO WAYS TO WORK WITH OBJECTS
+- DOT NOTATION:
+
+```js
+person.name = "John";
+console.log(person.name);
+// OUTPUT: John
+```
+
+- BRACKET NOTATION:
+
+```JS
+person['name'] = "Mary";
+console.log(person.name);
+// OUTPUT: Mary
+```
+
+---
+
+# ARRAYS
+
+- An ARRAY is a data structure that we use to represent a group of items(objects).
+
+```js
+let arrays = ["object1", "object2"];
+console.log(arrays);
+
+//OUTPUT: ["object1", "object2"]
 
 let selectedColors = ["red", "blue"];
 console.log(selectedColors);
 
-//OUTPUT: (2) ["red", "blue"]
+//OUTPUT: ["red", "blue"]
 ```
 
-they are listed from left to right with # designation starting from 0. "red" holds position (0) and "blue" holds (1)
-
-to display an item from any list you call on their position
-
-```js
-console.log(selectedColors[0]);
-```
-
-OUTPUT: red
-
-to add items in an ARRAY we add a value to the number position
+- Each element inside an array has an index # (starts from 0, 1, 2,...).
+- In the example above "red" occupies (0) and "blue" is (1), so if we want to call on "red" we can call its index number.
 
 ```js
 let selectedColors = ["red", "blue"];
-selectedColors[2] = "green";
-console.log(selectedColors);
+console.log(selectedColors[1]);
 
-// OUTPUT: (3) ["red", "blue", "green"]
-//*green was added to position #2.
+//OUTPUT: red
 ```
 
-ARRAYS can store different types of information
-EX: "strings", numbers (1,2,3...), Booleans (true/false) ...
+- we can add more elements to arrays during runtime by adding new elements to index slots.
+
+```js
+let selectedColors = ["red", "blue"];
+let selectedColors[2] = "green";
+console.log(selectedColors);
+
+//OUTPUT: ["red", "blue", "green"]
+```
+
+we can also store different types of data inside ARRAYS.
+
+```js
+let selectedColors = ["red", "blue"];
+let selectedColors[2] = 1; // <- Number
+console.log(selectedColors);
+
+//OUTPUT: ["red", "blue", 1]
+```
+
+- Since ARRAYS are technically OBJECTS, we can use DOT NOTATION to access different properties when calling ARRAYS
+
+  - console.log(selectedColors.lenght);
+  - console.log(selectedColors.indexOf);
+  - console.log(selectedColors.keys);
+  - etc...
+
+```js
+let selectedColors = ["red", "blue"];
+let selectedColors[2] = 1; // <- Number
+console.log(selectedColors.lenght);
+
+//OUTPUT: 3 <- ".lenght" returns the number of items inside an array.
+```
 
 ---
 
 # Functions
 
-- KEYWORD: "function"
-
-- ** FUNCTIONS are one of the fundamental blocks of JS **
-
-- Functions are ta set of statements that perform a TASK or CALCULATE a value
+- Functions are one of the fundamental blocks in JavaScript
+- Functions is a set of statements that PERFORMS A TASK or CALCULATES A VALUE.
 
 ```js
-//anything inside {} is the body of the function.
-function greeting() {
-  console.log("Hello World!");
+function variable(parameter) {
+   //body of a function
 }
+greet(Argument);
 
-greeting(); // <- to call the function in the console.
-```
-
-- FUNCTIONS can have INPUTS, inputs change how the function behaves
-
-```js
-// the value inside () is known as a PARAMETER. its only accesible inside the function. ***CANNOT BE CALLED OUTSIDE THE FUNCTION.
+--
 function greet(name) {
-  console.log("Hello " + name);
+   console.log("Hello" + name);
 }
 
-greet("John"); // when calling the function we need to pass a value (in this case the name "john"). This value is know as an ARGUMENT, it is supplied for the PARAMETER.
+greet("Adrian");
+
+//OUTPUT: Hello Adrian
 ```
 
-a FUNCTION can have multiple PARAMETERS
-ex:
+- We can also have multiple parameters inside functions
 
 ```js
 function greet(name, lastName) {
-  console.log("Hello " + name + " " + lastName);
+  console.log("Hello" + name + " " + lastName);
 }
 
-greet("John", "Smith");
+greet("Adrian", "Garay");
 
-// OUTPUT: Hello John Smith
+//OUTPUT: Hello Adrian Garay
 ```
 
-\*\* IF WE DO NOT PASS AN ARGUMENT FOR THE SECOND PARAMETER, WE WILL GET "undefined"
+- If we do not declare a value to our ARGUMENT, we will get "undefined"
 
 ```js
 function greet(name, lastName) {
-  console.log("Hello " + name + " " + lastName);
+  console.log("Hello" + name + " " + lastName);
 }
 
-greet("John"); // <- No second argument.
+greet("Adrian");
 
-// OUTPUT: Hello John undefined
+//OUTPUT: Hello Adrian undefined <- the default value of variables is "undefined".
 ```
 
-\*TYPES OF FUNCTIONS
+---
 
-- PERFORMING A TASK
+# TYPES OF FUNCTIONS
+
+## PERFORMING A TASK
 
 ```js
 function greet(name, lastName) {
@@ -108,7 +321,7 @@ greet("John", "Smith");
 //OUTPUT: Hello John Smith
 ```
 
-- CALCULATING A VALUE
+## CALCULATING A VALUE
 
 ```js
 function square(number) {
