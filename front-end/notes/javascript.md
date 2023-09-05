@@ -1,8 +1,12 @@
-# Javascript Notes
+# <span style="color: aquamarine"> JAVASCRIPT NOTES </span>
 
-## Variables
+### <span style="color: red;"> CMD SHFT + V</span> to open up preview.
 
-- KEYWORD: "let"
+---
+
+# <span style="color: yellow;"> Variables </span>
+
+- KEYWORD: <span style="color:red;">let</span>
 - VARIABLES are used to store DATA temparily inside a computers memory.
 
 ```js
@@ -14,8 +18,8 @@ Rules for naming variables:
 1. Cannot be a reserved keyword (if, let, var ...)
 2. Should be meaninful (they must be descriptive of what you are trying to store)
 3. Cannot start with a number (EX: 1name, 3stores, etc.)
-   Cannot contain a space or hyphen(-) all words must be connected
-4. first word of the variable must be lower case and every word after must have first letter capitalized. (firstName, lastName)
+4. Cannot contain a space or hyphen(-) all words must be connected
+5. first word of the variable must be lower case and every word after must have first letter capitalized. (firstName, lastName)
 
 If you want to declare multiple variables, its best practice to write them on their own line.
 
@@ -26,7 +30,7 @@ let lastName = "Garay";
 
 ---
 
-## Constants
+# <span style="color: yellow;"> Constants </span>
 
 KEYWORD: "const"
 
@@ -96,7 +100,7 @@ let variable = null;
 
 ---
 
-## Dynamic Typing
+# <span style="color: yellow;"> Dynamic Typing </span>
 
 KEYWORD: <span style="color:red;">typeof</span>
 
@@ -135,7 +139,7 @@ OUTPUT: "number" <- the value of our variable was changed from a string to a num
 
 ---
 
-# OBJECT
+# <span style="color: yellow;"> Objects </span>
 
 - An OBJECT is a collection of multiple related VARIABLES
 - Instead of having multiple variables we can group them together and then call on the "object.key". this helps write cleaner code.
@@ -198,7 +202,7 @@ console.log(person.name);
 
 ---
 
-# ARRAYS
+# <span style="color: yellow;"> Arrays </span>
 
 - An ARRAY is a data structure that we use to represent a group of items(objects).
 
@@ -261,7 +265,7 @@ console.log(selectedColors.lenght);
 
 ---
 
-# Functions
+# <span style="color: yellow;"> Functions </span>
 
 - Functions are one of the fundamental blocks in JavaScript
 - Functions is a set of statements that PERFORMS A TASK or CALCULATES A VALUE.
@@ -308,9 +312,9 @@ greet("Adrian");
 
 ---
 
-# TYPES OF FUNCTIONS
+# <span style="color: yellow;"> Types of Functions </span>
 
-## PERFORMING A TASK
+## <span style="color: red;"> Performing a Task </span>
 
 ```js
 function greet(name, lastName) {
@@ -321,7 +325,7 @@ greet("John", "Smith");
 //OUTPUT: Hello John Smith
 ```
 
-## CALCULATING A VALUE
+## <span style="color: red;"> Calculating a Value </span>
 
 ```js
 function square(number) {
@@ -334,9 +338,9 @@ console.log(square(2));
 
 ---
 
-# OPERATOR VARIATIONS
+# <span style="color: yellow;"> Operator Variations </span>
 
-- ARITHMATIC OPERATORS (USED TO PERFORM CALCULATIONS)
+## <span style="color: orange;"> - Arithmatic Operators (Calculations) </span>
 
 ```JS
 let x = 10;
@@ -352,7 +356,7 @@ console.log(++x); // Increment(++) -> increases value +1
 console.log(--x); // Decrement(--) -> decreases value -1
 ```
 
-- ASSIGNMENT OPERATORS (USED TO ASSIGN VALUES)
+## <span style="color: orange;"> - Assignment Operators (Used to Assign Values) </span>
 
 ```js
 let x = 10;
@@ -369,7 +373,9 @@ x *= 5; // multiplication
 x /= 5; // division
 ```
 
-# COMPARING OPERATORS
+---
+
+# <span style="color: yellow;"> Comparing Operators </span>
 
 - we use comparison operators to compare the value of a variable to something else
 
@@ -379,7 +385,7 @@ console.log(x > 0);
 //OUTPUT: true (answer will always be boolean TRUE or FALSE)
 ```
 
-RELATIONAL OPERATORS
+## <span style="color: orange;"> - Relational Operators </span>
 
 ```js
 console.log(x > 0); // X grater than 0
@@ -388,7 +394,7 @@ console.log(x < 1); // X less than 1
 console.log(x <= 1); // X less than or equal to 1
 ```
 
-EQUALITY OPERATORS
+## <span style="color: orange;"> - Equality Operators </span>
 
 ```js
 console.log(x === 1); // if X is equal to 1? TRUE
@@ -397,7 +403,7 @@ console.log(x !== 1); // if X is NOT equal to 1? FALSE
 
 ---
 
-# TERNARY OPERATOR
+# <span style="color: yellow;"> Ternary Operator </span>
 
 EXAMPLE:
 
