@@ -13,7 +13,7 @@
 let variable = "Data";
 ```
 
-Rules for naming variables:
+## Rules for naming variables:
 
 1. Cannot be a reserved keyword (if, let, var ...)
 2. Should be meaninful (they must be descriptive of what you are trying to store)
@@ -21,7 +21,7 @@ Rules for naming variables:
 4. Cannot contain a space or hyphen(-) all words must be connected
 5. first word of the variable must be lower case and every word after must have first letter capitalized. (firstName, lastName)
 
-If you want to declare multiple variables, its best practice to write them on their own line.
+- \*\* If you want to declare multiple variables, its best practice to write them on their own line.
 
 ```js
 let firstName = "Adrian";
@@ -32,7 +32,7 @@ let lastName = "Garay";
 
 # <span style="color: yellow;"> Constants </span>
 
-KEYWORD: "const"
+KEYWORD: <span style="color:red;">const</span>
 
 - If we dont want DATA inside a VARIABLE to every change or be altered, we use "const" instead of "let".
 
@@ -40,59 +40,64 @@ KEYWORD: "const"
 let interestRate = 0.3;
 interestRate = 1;
 console.log(interestRate);
-```
 
-<strong>OUTPUT</strong>: 1 <- the new value of the variable changed to 1.
+OUTPUT: 1; // <- the new value of the variable changed to 1.
+```
 
 ```js
 const interestRate = 0.3;
 interstRate = 1;
 console.log(interestRate);
-```
 
-<strong>OUTPUT:</strong> TypeError: line 3 <- we cannot reasign a CONSTANT.
+OUTPUT: TypeError: line 3 // <- we cannot reasign a CONSTANT.
+```
 
 \*\* IN THE REAL WORLD IF WE DO NOT NEED TO REASIGN A VARIABLE WE USE "const", OTHERWISE USE "let"
 
 ---
 
-## Primitive types
+# <span style="color: yellow;"> Primitive Types </span>
 
-### 2 category of types that can be assigned to a variable
+## - 2 category of types that can be assigned to a variable
 
 ## Primitives / Value Types
 
-1. "strings"
-   - any value encased by quotes " "
+### 1. <span style="color: orange;"> "strings" </span>
+
+- any value encased by quotes " "
 
 ```js
 let variable = "Data";
 ```
 
-2. Numbers
-   - numbers do not need quotes
+### 2. <span style="color: orange;"> Numbers </span>
+
+- numbers do not need quotes
 
 ```js
 let variable = 1;
 ```
 
-3. Booleans
-   - ONLY 2 possible values are booleans: true / false
+### 3. <span style="color: orange;"> Booleans </span>
+
+- ONLY 2 possible values are booleans: true / false
 
 ```js
 let variable = true;
 let variable = false;
 ```
 
-4. Undefined
-   - by default, all variables are set to Undefined until given a value.
+### 4. <span style="color: orange;"> Undefined </span>
+
+- by default, all variables are set to Undefined until given a value.
 
 ```js
 let variable = undefined;
 ```
 
-5. Null
-   - When we want to clear the value of a variable we use NULL.
+### 5. <span style="color: orange;"> Null </span>
+
+- When we want to clear the value of a variable we use NULL.
 
 ```js
 let variable = null;
@@ -125,11 +130,11 @@ Now if we change the value to something other than a "string" we will get a new 
 let variable = "data";
 variable = 1;
 typeof variable;
+
+OUTPUT: "number"; // <- the value of our variable was changed from a string to a number.
 ```
 
-OUTPUT: "number" <- the value of our variable was changed from a string to a number.
-
-\*\* "typeof" will return one of our 5 value types:
+## \*\* "typeof" will return one of our 5 value types:
 
 1. "string"
 2. "number"
@@ -155,15 +160,21 @@ let object = {
 
 console.log(object);
 
+OUTPUT: {key: "value-one", secondKey: "value-two"}
+```
+
+```js
+
 let person = {
   name: "Adrian",
   age: "30",
 };
 
 console.log(person);
-```
+
 
 OUTPUT: {name: "Adrian", age: 30}
+```
 
 - to call on a KEY we need to call on the name property.
 
@@ -177,27 +188,29 @@ let person = {
 
 console.log(person.age);
 console.log(person.name);
+
+OUTPUT: 30;
+OUTPUT: Adrian;
 ```
 
-OUTPUT: 30
-s
-OUTPUT: Adrian
+## - THERE ARE TWO WAYS TO WORK WITH OBJECTS
 
-- ## THERE ARE TWO WAYS TO WORK WITH OBJECTS
-- DOT NOTATION:
+### <span style="color: orange;"> Dot Notation: </span>
 
 ```js
 person.name = "John";
 console.log(person.name);
-// OUTPUT: John
+
+OUTPUT: "John";
 ```
 
-- BRACKET NOTATION:
+### <span style="color: orange;"> Bracket Notation: </span>
 
 ```JS
 person['name'] = "Mary";
 console.log(person.name);
-// OUTPUT: Mary
+
+OUTPUT: "Mary"
 ```
 
 ---
@@ -210,12 +223,14 @@ console.log(person.name);
 let arrays = ["object1", "object2"];
 console.log(arrays);
 
-//OUTPUT: ["object1", "object2"]
+OUTPUT: ["object1", "object2"];
+```
 
+```js
 let selectedColors = ["red", "blue"];
 console.log(selectedColors);
 
-//OUTPUT: ["red", "blue"]
+OUTPUT: ["red", "blue"];
 ```
 
 - Each element inside an array has an index # (starts from 0, 1, 2,...).
@@ -225,7 +240,7 @@ console.log(selectedColors);
 let selectedColors = ["red", "blue"];
 console.log(selectedColors[1]);
 
-//OUTPUT: red
+OUTPUT: "red";
 ```
 
 - we can add more elements to arrays during runtime by adding new elements to index slots.
@@ -235,7 +250,7 @@ let selectedColors = ["red", "blue"];
 let selectedColors[2] = "green";
 console.log(selectedColors);
 
-//OUTPUT: ["red", "blue", "green"]
+OUTPUT: ["red", "blue", "green"]
 ```
 
 we can also store different types of data inside ARRAYS.
@@ -250,17 +265,19 @@ console.log(selectedColors);
 
 - Since ARRAYS are technically OBJECTS, we can use DOT NOTATION to access different properties when calling ARRAYS
 
-  - console.log(selectedColors.lenght);
-  - console.log(selectedColors.indexOf);
-  - console.log(selectedColors.keys);
-  - etc...
+```js
+console.log(selectedColors.length);
+console.log(selectedColors.indexOf);
+console.log(selectedColors.keys);
+etc...
+```
 
 ```js
 let selectedColors = ["red", "blue"];
 let selectedColors[2] = 1; // <- Number
-console.log(selectedColors.lenght);
+console.log(selectedColors.length);
 
-//OUTPUT: 3 <- ".lenght" returns the number of items inside an array.
+OUTPUT: 3  // <- (.length) returns the number of items inside an array.
 ```
 
 ---
@@ -283,7 +300,7 @@ function greet(name) {
 
 greet("Adrian");
 
-//OUTPUT: Hello Adrian
+OUTPUT: Hello Adrian
 ```
 
 - We can also have multiple parameters inside functions
@@ -295,7 +312,7 @@ function greet(name, lastName) {
 
 greet("Adrian", "Garay");
 
-//OUTPUT: Hello Adrian Garay
+OUTPUT: Hello Adrian Garay
 ```
 
 - If we do not declare a value to our ARGUMENT, we will get "undefined"
@@ -307,7 +324,7 @@ function greet(name, lastName) {
 
 greet("Adrian");
 
-//OUTPUT: Hello Adrian undefined <- the default value of variables is "undefined".
+OUTPUT: Hello Adrian undefined  // <- the default value of variables is "undefined".
 ```
 
 ---
@@ -322,7 +339,8 @@ function greet(name, lastName) {
 }
 
 greet("John", "Smith");
-//OUTPUT: Hello John Smith
+
+OUTPUT: Hello John Smith
 ```
 
 ## <span style="color: red;"> Calculating a Value </span>
@@ -333,7 +351,8 @@ function square(number) {
 }
 
 console.log(square(2));
-//OUTPUT: 4
+
+OUTPUT: 4;
 ```
 
 ---
@@ -382,7 +401,7 @@ x /= 5; // division
 ```js
 let x = 1;
 console.log(x > 0);
-//OUTPUT: true (answer will always be boolean TRUE or FALSE)
+OUTPUT: true; //(answer will always be boolean TRUE or FALSE)
 ```
 
 ## <span style="color: orange;"> - Relational Operators </span>
@@ -496,7 +515,7 @@ switch (role) {
     console.log("Unknown User");
 }
 
-//OUTPUT: "Moderator User" <- second case was executed when 2nd scenario was met.
+OUTPUT: "Moderator User"; // <- second case was executed when 2nd scenario was met.
 ```
 
 ```js
@@ -511,8 +530,9 @@ else console.log("unknown User");
 
 # <span style="color: yellow;"> Loops </span>
 
-- if we want to repeat actions X-amount of times we use loops
-- we have 5 different types of Loops:
+## - If we want to repeat actions X-amount of times we use loops
+
+### we have 5 different types of Loops:
 
 1. for
 2. while
@@ -520,7 +540,7 @@ else console.log("unknown User");
 4. for...in
 5. for...of
 
-## <span style="color: orange;"> - for </span>
+# <span style="color: orange;"> for </span>
 
 ```js
 for (let variable = #; condition we want to meet; incrementExpression will execute until condition is met){
@@ -532,7 +552,7 @@ for (let i = 0; i < 5; i++) {
   console.log("hello World");
 }
 
-// OUTPUT:
+OUTPUT:
 (0)"Hello World" // condition is still true so it will continue to execute until it is met.
 (1)"Hello World"
 (2)"Hello World"
