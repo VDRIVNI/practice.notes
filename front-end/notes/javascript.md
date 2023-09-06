@@ -419,3 +419,123 @@ let type = points > 100 ? "gold" : "silver";
 
 console.log(type);
 ```
+
+---
+
+# <span style="color: yellow;"> Conditional Statements </span>
+
+- In Javascript we have two kinds of conditional statements.
+
+## <span style="color: orange;"> - if...else </span>
+
+- KEYWORD: <span style="color:red;"> "if" "else if" "else" </span>
+
+- if..else statement is used for decision making in programming. If the given condition is true, then the code inside if block is executed, otherwise else block code is executed.
+
+```js
+if (condition) {
+  //condition1 = true (will execute)
+} else if (condition02) {
+  //condition02 = true (will execute)
+} else {
+  // condition 01 or 02 = false (will execute)
+}
+```
+
+```js
+// hour
+// if hour is between 6 am and 12pm: Good Morning!
+// if it is between 12pm and 6 pm: Good Afternoon!
+// otherwise: Good Evening!
+
+let hour = 10;
+
+if (hour >= 6 && hour < 12) {
+  console.log("Good Morning");
+} else if (hour >= 12 && hour < 18) {
+  console.log("Good Afternoon");
+} else console.log("Good Evening");
+```
+
+## <span style="color: orange;"> - switch...case </span>
+
+- KEYWORD: <span style="color:red;"> "switch" "case" "break" "default" </span>
+- A switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each switch case.
+
+```js
+// variable we are trying to test
+let variable = "value";
+
+switch (variable) {
+  case "value": // if this variable = "value"
+    // statement or scenario will execute
+    break;
+
+  case "value-two": // if this variable = "value"
+    //statement02 or scenario02 will execute
+    break;
+
+  default: // if no statement has been met.
+  //default statement/scenario will execute.
+}
+```
+
+```js
+let role = "moderator";
+
+switch (role) {
+  case "guest":
+    console.log("guest User");
+    break;
+
+  case "moderator":
+    console.log("Moderator User");
+    break;
+
+  default:
+    console.log("Unknown User");
+}
+
+//OUTPUT: "Moderator User" <- second case was executed when 2nd scenario was met.
+```
+
+```js
+// we can also use "if...else" to get the same results.
+
+if (role === "guest") console.log("guest User");
+else if (role === "moderator") console.log("moderator");
+else console.log("unknown User");
+```
+
+---
+
+# <span style="color: yellow;"> Loops </span>
+
+- if we want to repeat actions X-amount of times we use loops
+- we have 5 different types of Loops:
+
+1. for
+2. while
+3. do...while
+4. for...in
+5. for...of
+
+## <span style="color: orange;"> - for </span>
+
+```js
+for (let variable = #; condition we want to meet; incrementExpression will execute until condition is met){
+  statement we want to execute;
+}
+
+// statement("Hello World") will execute until "i" is <5 (0,1,2,3,4)
+for (let i = 0; i < 5; i++) {
+  console.log("hello World");
+}
+
+// OUTPUT:
+(0)"Hello World" // condition is still true so it will continue to execute until it is met.
+(1)"Hello World"
+(2)"Hello World"
+(3)"Hello World"
+(4)"Hello World" // after (4) condition is evaluated as false and stop the execution of the statement.
+```
