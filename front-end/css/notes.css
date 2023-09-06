@@ -1,0 +1,30 @@
+body {
+    color: white;
+}
+#title {
+    color: aquamarine;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+h1 {
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+}
+h2 { 
+    font-size: 24px;
+    color: dodgerblue;
+}
+h3 {
+    color: orange;
+}
+h4 {
+    color: red;
+    font-size: 15px;
+}
+.keyword {
+    color: rgb(209, 104, 52);
+    font-size: 18px;
+    text-decoration:underline;
+}

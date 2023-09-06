@@ -1,12 +1,14 @@
-# <span style="color: aquamarine"> JAVASCRIPT NOTES </span>
+<link rel="stylesheet" href="../css/notes.css" />
 
-### <span style="color: red;"> CMD SHFT + V</span> to open up preview.
+<div id="title">JAVASCRIPT NOTES</div>
+
+- To open up preview<span class="keyword"> cmd shift + V</span>
 
 ---
 
-# <span style="color: yellow;"> Variables </span>
+# Variables
 
-- KEYWORD: <span style="color:red;">let</span>
+- KEYWORD: <span class="keyword">let</span>
 - VARIABLES are used to store DATA temparily inside a computers memory.
 
 ```js
@@ -21,7 +23,7 @@ let variable = "Data";
 4. Cannot contain a space or hyphen(-) all words must be connected
 5. first word of the variable must be lower case and every word after must have first letter capitalized. (firstName, lastName)
 
-- \*\* If you want to declare multiple variables, its best practice to write them on their own line.
+#### If you want to declare multiple variables, its best practice to write them on their own line.
 
 ```js
 let firstName = "Adrian";
@@ -32,7 +34,7 @@ let lastName = "Garay";
 
 # <span style="color: yellow;"> Constants </span>
 
-KEYWORD: <span style="color:red;">const</span>
+KEYWORD: <span class="keyword">const</span>
 
 - If we dont want DATA inside a VARIABLE to every change or be altered, we use "const" instead of "let".
 
@@ -52,17 +54,17 @@ console.log(interestRate);
 OUTPUT: TypeError: line 3 // <- we cannot reasign a CONSTANT.
 ```
 
-\*\* IN THE REAL WORLD IF WE DO NOT NEED TO REASIGN A VARIABLE WE USE "const", OTHERWISE USE "let"
+<h4> IN THE REAL WORLD IF WE DO NOT NEED TO REASIGN A VARIABLE WE USE "const", OTHERWISE USE "let"</h4>
 
 ---
 
-# <span style="color: yellow;"> Primitive Types </span>
+# Primitive Types
 
 ## - 2 category of types that can be assigned to a variable
 
 ## Primitives / Value Types
 
-### 1. <span style="color: orange;"> "strings" </span>
+### 1. "strings"
 
 - any value encased by quotes " "
 
@@ -70,7 +72,7 @@ OUTPUT: TypeError: line 3 // <- we cannot reasign a CONSTANT.
 let variable = "Data";
 ```
 
-### 2. <span style="color: orange;"> Numbers </span>
+### 2. Numbers
 
 - numbers do not need quotes
 
@@ -78,7 +80,7 @@ let variable = "Data";
 let variable = 1;
 ```
 
-### 3. <span style="color: orange;"> Booleans </span>
+### 3. Booleans
 
 - ONLY 2 possible values are booleans: true / false
 
@@ -87,7 +89,7 @@ let variable = true;
 let variable = false;
 ```
 
-### 4. <span style="color: orange;"> Undefined </span>
+### 4. Undefined
 
 - by default, all variables are set to Undefined until given a value.
 
@@ -95,7 +97,7 @@ let variable = false;
 let variable = undefined;
 ```
 
-### 5. <span style="color: orange;"> Null </span>
+### 5. Null
 
 - When we want to clear the value of a variable we use NULL.
 
@@ -105,9 +107,9 @@ let variable = null;
 
 ---
 
-# <span style="color: yellow;"> Dynamic Typing </span>
+# Dynamic Typing
 
-KEYWORD: <span style="color:red;">typeof</span>
+KEYWORD: <span class="keyword">typeof</span>
 
 - JavaScript is a dynamic language
   - When a variable is set, we can change the value inside a value during runtime.
@@ -144,7 +146,7 @@ OUTPUT: "number"; // <- the value of our variable was changed from a string to a
 
 ---
 
-# <span style="color: yellow;"> Objects </span>
+# Objects
 
 - An OBJECT is a collection of multiple related VARIABLES
 - Instead of having multiple variables we can group them together and then call on the "object.key". this helps write cleaner code.
@@ -195,7 +197,7 @@ OUTPUT: Adrian;
 
 ## - THERE ARE TWO WAYS TO WORK WITH OBJECTS
 
-### <span style="color: orange;"> Dot Notation: </span>
+### Dot Notation:
 
 ```js
 person.name = "John";
@@ -204,7 +206,7 @@ console.log(person.name);
 OUTPUT: "John";
 ```
 
-### <span style="color: orange;"> Bracket Notation: </span>
+### Bracket Notation:
 
 ```JS
 person['name'] = "Mary";
@@ -215,7 +217,7 @@ OUTPUT: "Mary"
 
 ---
 
-# <span style="color: yellow;"> Arrays </span>
+# Arrays
 
 - An ARRAY is a data structure that we use to represent a group of items(objects).
 
@@ -282,7 +284,7 @@ OUTPUT: 3  // <- (.length) returns the number of items inside an array.
 
 ---
 
-# <span style="color: yellow;"> Functions </span>
+# Functions
 
 - Functions are one of the fundamental blocks in JavaScript
 - Functions is a set of statements that PERFORMS A TASK or CALCULATES A VALUE.
@@ -329,9 +331,9 @@ OUTPUT: Hello Adrian undefined  // <- the default value of variables is "undefin
 
 ---
 
-# <span style="color: yellow;"> Types of Functions </span>
+# Types of Functions
 
-## <span style="color: red;"> Performing a Task </span>
+## Performing a Task
 
 ```js
 function greet(name, lastName) {
@@ -343,7 +345,7 @@ greet("John", "Smith");
 OUTPUT: Hello John Smith
 ```
 
-## <span style="color: red;"> Calculating a Value </span>
+## Calculating a Value
 
 ```js
 function square(number) {
@@ -357,9 +359,9 @@ OUTPUT: 4;
 
 ---
 
-# <span style="color: yellow;"> Operator Variations </span>
+# Operator Variations
 
-## <span style="color: orange;"> - Arithmatic Operators (Calculations) </span>
+## - Arithmatic Operators (Calculations)
 
 ```JS
 let x = 10;
@@ -375,7 +377,7 @@ console.log(++x); // Increment(++) -> increases value +1
 console.log(--x); // Decrement(--) -> decreases value -1
 ```
 
-## <span style="color: orange;"> - Assignment Operators (Used to Assign Values) </span>
+## - Assignment Operators (Used to Assign Values)
 
 ```js
 let x = 10;
@@ -394,7 +396,7 @@ x /= 5; // division
 
 ---
 
-# <span style="color: yellow;"> Comparing Operators </span>
+# Comparing Operators
 
 - we use comparison operators to compare the value of a variable to something else
 
@@ -404,7 +406,7 @@ console.log(x > 0);
 OUTPUT: true; //(answer will always be boolean TRUE or FALSE)
 ```
 
-## <span style="color: orange;"> - Relational Operators </span>
+## - Relational Operators
 
 ```js
 console.log(x > 0); // X grater than 0
@@ -413,7 +415,7 @@ console.log(x < 1); // X less than 1
 console.log(x <= 1); // X less than or equal to 1
 ```
 
-## <span style="color: orange;"> - Equality Operators </span>
+## - Equality Operators
 
 ```js
 console.log(x === 1); // if X is equal to 1? TRUE
@@ -422,7 +424,7 @@ console.log(x !== 1); // if X is NOT equal to 1? FALSE
 
 ---
 
-# <span style="color: yellow;"> Ternary Operator </span>
+# Ternary Operator
 
 EXAMPLE:
 
@@ -441,11 +443,11 @@ console.log(type);
 
 ---
 
-# <span style="color: yellow;"> Conditional Statements </span>
+# Conditional Statements
 
 - In Javascript we have two kinds of conditional statements.
 
-## <span style="color: orange;"> - if...else </span>
+## - if...else
 
 - KEYWORD: <span style="color:red;"> "if" "else if" "else" </span>
 
@@ -476,9 +478,9 @@ if (hour >= 6 && hour < 12) {
 } else console.log("Good Evening");
 ```
 
-## <span style="color: orange;"> - switch...case </span>
+## - switch...case
 
-- KEYWORD: <span style="color:red;"> "switch" "case" "break" "default" </span>
+- KEYWORD: <span class="Keyword">switch" "case" "break" "default" </span>
 - A switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each switch case.
 
 ```js
@@ -528,11 +530,11 @@ else console.log("unknown User");
 
 ---
 
-# <span style="color: yellow;"> Loops </span>
+# Loops
 
 ## - If we want to repeat actions X-amount of times we use loops
 
-### we have 5 different types of Loops:
+#### we have 5 different types of Loops:
 
 1. for
 2. while
@@ -540,7 +542,7 @@ else console.log("unknown User");
 4. for...in
 5. for...of
 
-# <span style="color: orange;"> for </span>
+## for
 
 ```js
 for (let variable = #; condition we want to meet; incrementExpression will execute until condition is met){
