@@ -2,17 +2,25 @@
 
 <div id="title">JAVASCRIPT NOTES</div>
 
-- To open up preview<span class="keyword"> cmd shift + V</span>
+- To open up preview<span class="keyword"> cmd shift + V</span> these notes.
+
+---
+
+- QUICKTIP: Notes in JavaScript
+
+```js
+// double slash to write comments in your code.
+```
 
 ---
 
 # Variables
 
 - KEYWORD: <span class="keyword">let</span>
-- VARIABLES are used to store DATA temparily inside a computers memory.
+- a VARIABLE is a value that can change, depending on conditions or on information passed to the program
 
 ```js
-let variable = "Data";
+let variable = "Value";
 ```
 
 ## Rules for naming variables:
@@ -23,7 +31,7 @@ let variable = "Data";
 4. Cannot contain a space or hyphen(-) all words must be connected
 5. first word of the variable must be lower case and every word after must have first letter capitalized. (firstName, lastName)
 
-#### If you want to declare multiple variables, its best practice to write them on their own line.
+#### IF YOU WANT TO DECLARE MULTIPLE VARIABLES, ITS BEST PRACTICE TO WRITE THEM ON THEIR ONW LINE.
 
 ```js
 let firstName = "Adrian";
@@ -32,7 +40,7 @@ let lastName = "Garay";
 
 ---
 
-# <span style="color: yellow;"> Constants </span>
+# Constants
 
 KEYWORD: <span class="keyword">const</span>
 
@@ -58,9 +66,7 @@ OUTPUT: TypeError: line 3 // <- we cannot reasign a CONSTANT.
 
 ---
 
-# Primitive Types
-
-## - 2 category of types that can be assigned to a variable
+# Data Types
 
 ## Primitives / Value Types
 
@@ -111,20 +117,22 @@ let variable = null;
 
 KEYWORD: <span class="keyword">typeof</span>
 
-- JavaScript is a dynamic language
-  - When a variable is set, we can change the value inside a value during runtime.
+- Javascript is a dynamic typing language. When you declare a variable, you do not need to specify what type this variable is. Javascript engine infers what type this variable is based on the value assigned to at run time.
 
 ```js
-let variable = "Data";
+let varible = undefined;
+// later down the road this varible can be given a different value.
+
+let variable = "This variable is now a string";
 ```
 
 if we attempt to check in our console the value type using type of we will get "string"
 
 ```js
 typeof variable;
-```
 
-OUTPUT: "string"
+OUTPUT: "string";
+```
 
 Now if we change the value to something other than a "string" we will get a new output for our type.
 
@@ -142,17 +150,13 @@ OUTPUT: "number"; // <- the value of our variable was changed from a string to a
 2. "number"
 3. "boolean"
 4. "undefined"
-5. (null) "object"
+5. "object" (null)
 
 ---
 
 # Objects
 
-- An OBJECT is a collection of multiple related VARIABLES
-- Instead of having multiple variables we can group them together and then call on the "object.key". this helps write cleaner code.
-- {} is known as a object literal
-- The properties inside an object are called KEYS.
--
+- An object is a collection of properties, and a property is an association between a name (or key) and a value.
 
 ```js
 let object = {
@@ -164,6 +168,9 @@ console.log(object);
 
 OUTPUT: {key: "value-one", secondKey: "value-two"}
 ```
+
+- {} is known as a object literal
+- The properties inside an object are called KEYS.
 
 ```js
 
@@ -178,11 +185,9 @@ console.log(person);
 OUTPUT: {name: "Adrian", age: 30}
 ```
 
-- to call on a KEY we need to call on the name property.
+- to access the property name we need to call on the object.key
 
 ```js
-// to access the property name we need to call on the object.key
-
 let person = {
   name: "Adrian",
   age: 30,
@@ -195,24 +200,38 @@ OUTPUT: 30;
 OUTPUT: Adrian;
 ```
 
-## - THERE ARE TWO WAYS TO WORK WITH OBJECTS
+## THERE ARE TWO WAYS TO WORK WITH OBJECTS
 
 ### Dot Notation:
 
-```js
-person.name = "John";
-console.log(person.name);
+- Dot notation is the most common way to access elements in JavaScript. To use dot notation, you simply write the name of the object followed by a dot and the name of the property you want to access.
 
-OUTPUT: "John";
+```js
+syntax: object.value;
 ```
 
 ### Bracket Notation:
 
-```JS
-person['name'] = "Mary";
-console.log(person.name);
+- The Bracket Notation approach involves using square brackets, in which you have an expression that evaluates to a value. That value serves as a key for accessing the property.
 
-OUTPUT: "Mary"
+```js
+syntax: object[expression];
+```
+
+EXAMPLE:
+
+```js
+let person = {
+  name: "Adrian",
+};
+
+// Dot Notation:
+console.log(person.name);
+OUTPUT: "Adrian";
+
+// Bracket Notation:
+console.log(person["name"]);
+OUTPUT: "Adrian";
 ```
 
 ---
@@ -291,11 +310,12 @@ OUTPUT: 3  // <- (.length) returns the number of items inside an array.
 
 ```js
 function variable(parameter) {
-   //body of a function
+  //body of a function
 }
 greet(Argument);
+```
 
---
+```js
 function greet(name) {
    console.log("Hello" + name);
 }
@@ -329,11 +349,11 @@ greet("Adrian");
 OUTPUT: Hello Adrian undefined  // <- the default value of variables is "undefined".
 ```
 
----
+## TYPES OF FUNCTIONS
 
-# Types of Functions
+### Performing a Task
 
-## Performing a Task
+- In programming, functions allow the structuring of programs in segments of code to enable performance of individual tasks
 
 ```js
 function greet(name, lastName) {
@@ -345,7 +365,9 @@ greet("John", "Smith");
 OUTPUT: Hello John Smith
 ```
 
-## Calculating a Value
+### Calculating a Value
+
+- Evaluating a function means finding the value of f(x) =… or y =… that corresponds to a given value of x
 
 ```js
 function square(number) {
@@ -361,7 +383,7 @@ OUTPUT: 4;
 
 # Operator Variations
 
-## - Arithmatic Operators (Calculations)
+### Arithmatic Operators (Calculations)
 
 ```JS
 let x = 10;
@@ -377,7 +399,7 @@ console.log(++x); // Increment(++) -> increases value +1
 console.log(--x); // Decrement(--) -> decreases value -1
 ```
 
-## - Assignment Operators (Used to Assign Values)
+### Assignment Operators (Used to Assign Values)
 
 ```js
 let x = 10;
@@ -406,7 +428,7 @@ console.log(x > 0);
 OUTPUT: true; //(answer will always be boolean TRUE or FALSE)
 ```
 
-## - Relational Operators
+### Relational Operators
 
 ```js
 console.log(x > 0); // X grater than 0
@@ -415,7 +437,7 @@ console.log(x < 1); // X less than 1
 console.log(x <= 1); // X less than or equal to 1
 ```
 
-## - Equality Operators
+### Equality Operators
 
 ```js
 console.log(x === 1); // if X is equal to 1? TRUE
