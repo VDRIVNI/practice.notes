@@ -2,21 +2,45 @@
 
 <div id="title">JAVASCRIPT NOTES</div>
 
-- To open up preview<span class="keyword"> cmd shift + V</span> these notes.
+> 💡 To open up preview<span class="keyword"> cmd shift + V</span> these notes.
 
 ---
+💡
 
-- QUICKTIP: Notes in JavaScript
-
+> JavaScript is an object-oriented computer programming language commonly used to create interactive effects within web browsers.
 ```js
-// double slash to write comments in your code.
+// double slash to write comments in JavaScript files.
 ```
+***
+### Table of Content
+***
+- [Variables](#variables)
+
+- [Constants](#constants)
+- [Data Types](#data-types)
+  
+- [Dynamic Typing](#dynamic-typing)
+  
+- [Objects](#objects)
+  
+- [Arrays](#arrays)
+- [Functions](#functions)
+
+- [Operator Variations](#operator-variations)
+    
+- [Comparing Operators](#comparing-operators)
+   
+- [Ternary Operator](#ternary-operator)
+- [Conditional Statements](#conditional-statements)
+ 
+- [Loops](#loops)
+  
 
 ---
 
 # Variables
 
-- KEYWORD: <span class="keyword">let</span>
+>  KEYWORD: <span class="keyword">let</span>
 - a VARIABLE is a value that can change, depending on conditions or on information passed to the program
 
 ```js
@@ -31,7 +55,7 @@ let variable = "Value";
 4. Cannot contain a space or hyphen(-) all words must be connected
 5. first word of the variable must be lower case and every word after must have first letter capitalized. (firstName, lastName)
 
-#### IF YOU WANT TO DECLARE MULTIPLE VARIABLES, ITS BEST PRACTICE TO WRITE THEM ON THEIR ONW LINE.
+#### **IF YOU WANT TO DECLARE MULTIPLE VARIABLES, ITS BEST PRACTICE TO WRITE THEM ON THEIR OWN LINE.**
 
 ```js
 let firstName = "Adrian";
@@ -42,7 +66,7 @@ let lastName = "Garay";
 
 # Constants
 
-KEYWORD: <span class="keyword">const</span>
+> KEYWORD: <span class="keyword">const</span>
 
 - If we dont want DATA inside a VARIABLE to every change or be altered, we use "const" instead of "let".
 
@@ -62,7 +86,7 @@ console.log(interestRate);
 OUTPUT: TypeError: line 3 // <- we cannot reasign a CONSTANT.
 ```
 
-<h4> IN THE REAL WORLD IF WE DO NOT NEED TO REASIGN A VARIABLE WE USE "const", OTHERWISE USE "let"</h4>
+#### **IN THE REAL WORLD IF WE DO NOT NEED TO REASIGN A VARIABLE WE USE "const", OTHERWISE USE "let"**
 
 ---
 
@@ -115,7 +139,7 @@ let variable = null;
 
 # Dynamic Typing
 
-KEYWORD: <span class="keyword">typeof</span>
+> KEYWORD: <span class="keyword">typeof</span>
 
 - Javascript is a dynamic typing language. When you declare a variable, you do not need to specify what type this variable is. Javascript engine infers what type this variable is based on the value assigned to at run time.
 
@@ -169,8 +193,8 @@ console.log(object);
 OUTPUT: {key: "value-one", secondKey: "value-two"}
 ```
 
-- {} is known as a object literal
-- The properties inside an object are called KEYS.
+> - {} is known as a object literal
+> - The properties inside an object are called KEYS.
 
 ```js
 
@@ -471,7 +495,7 @@ console.log(type);
 
 ## - if...else
 
-- KEYWORD: <span style="color:red;"> "if" "else if" "else" </span>
+> **KEYWORD: <span style="color:red;"> "if" "else if" "else" </span>**
 
 - if..else statement is used for decision making in programming. If the given condition is true, then the code inside if block is executed, otherwise else block code is executed.
 
@@ -502,7 +526,7 @@ if (hour >= 6 && hour < 12) {
 
 ## - switch...case
 
-- KEYWORD: <span class="Keyword">switch" "case" "break" "default" </span>
+> **KEYWORD: <span class="Keyword">switch" "case" "break" "default" </span>**
 - A switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each switch case.
 
 ```js
