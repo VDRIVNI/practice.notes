@@ -1,58 +1,164 @@
-# MARKDOWN NOTES!
+# Markdown Crash Course
 
-[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
+**Video Course**
 
-## **CMD SHFT + V** Opens preview page.
+[![Thumbnail](https://img.youtube.com/vi/ftOBvusMHjQ/maxresdefault.jpg)](https://youtu.be/ftOBvusMHjQ)
 
-# HEADINGS
+--- 
 
-- Headings are made by adding #'s before text.
+## Basic Syntax
 
-1. # Heading 1
-2. ## Heading 2
-3. ### Heading 3
-4. #### Heading 4
-5. ##### Heading 5
-6. ###### Heading 6
+### Headings
+
+Below are 6 heading variations. 
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
 
 ---
 
-# TEXT STYLES
+### Horizontal Rule
 
-(BOLD) - (\*\*) before and after text.
+3 dashes creates a horizontal line.
 
-(ITALIC) - (\*) star before and after text.
+---
 
-# LISTS
+### Text formating
 
-ORDERED LISTS (NUMBERED LIST)
+Paragraph line spacing is important.
+This sentence is on the same line even though it's on the next line of the editor because there's no separation of content.
 
-1.  LIST ITEM
-2.  LIST ITEM
-3.  LIST ITEM
+Add an empty line between elements.
 
-UNORDERED LISTS (BULLET LIST BY ADDING (-) BEFORE TEXT)
+*italic text* and _more italic text_ or cmd + I
 
-- ITEM 1
-- ITEM 2
-- ITEM 3
+**bold text** and __more bold text__ or cmd + B
 
-# CODES
+***bold and italic text*** 
 
-- USE (`` - back tick) BEFORE AND AFTER TEXT TO TRANSFORM THEM INTO CODE.
-- USE ``` BEFORE AND AFTER TO TRANSFORM TEXT INTO A BLOCK OF CODE.
-  - ADD LANGUAGE AFTER ``` TO TRANFORM TEXT INTO THAT LANGUAGE.
-  - EXAMPLE (``` js/py/html/css)
-  ```JS
-  EXAMPLE
-  ```
+**mix *and* match**
 
-# LINKS AND IMAGES
+~~strikethrough text~~
 
-LINKS - "[TITLE]" FOLLOWED BY "(LINK)"
+### Lists
 
-- "[ ] ( )"
+Ordered List
 
-IMAGES - "![TITLE]" FOLLOWED BY "(IMAGE LINK)"
+1. Item 1
+1. Item 2
+1. Item 3
 
-- "![ ] ( )"
+Unordered List
+
+- Item
+- Item
+- Item
+
+### Code formating
+
+Inline: Use JavaScript `map()` on arrays. 
+
+Fenced code block:
+
+```js
+const sum = (a, b) => a + b
+
+sum(2,2)
+```
+
+### Blockquote
+
+> This is a blockquote
+> 
+> more text
+> 
+> > Nexted blockquote
+
+### Links
+
+[codeSTACKr](https://youtube.com/codeSTACKr 'codeSTACKr YouTube')
+
+[Headings](#headings)
+
+[codeSTACKr][cs]
+
+[cs]: https://youtube.com/codeSTACKr 'codeSTACKr YouTube'
+
+### Images
+
+![alt text](/codecat.png)
+
+[![alt text](/codecat.png)](https://codecats.xyz)
+
+## Extended Syntax
+
+Not all extended syntax features work in all markdown applications. 
+
+### Table
+
+| Packages | Description          | Version |
+| :---     |    :----:            |    ---: |
+| React    | JavaScript Framework | v18.0   |
+| Next.js  | React Framework      | v12.0   |
+
+### Task List
+
+- [x] Task 1
+- [ ] Task 2
+- [ ] Task 3
+
+### Emoji
+
+Emoji's are fun! :joy:
+
+### Comments
+
+[This is a hidden comment.]: # 
+
+### Toggle
+
+<details>
+  <summary>:zap: This is a toggle!</summary>
+
+  Contents of toggle.
+</details>
+
+### Callouts
+
+> :bulb: **Tip:** Here's an important tip to remember!
+
+### Table of Contents
+
+- [Markdown Crash Course](#markdown-crash-course)
+  - [Basic Syntax](#basic-syntax)
+    - [Headings](#headings)
+- [Heading 1](#heading-1)
+  - [Heading 2](#heading-2)
+    - [Heading 3](#heading-3)
+      - [Heading 4](#heading-4)
+        - [Heading 5](#heading-5)
+          - [Heading 6](#heading-6)
+    - [Horizontal Rule](#horizontal-rule)
+    - [Text formating](#text-formating)
+    - [Lists](#lists)
+    - [Code formating](#code-formating)
+    - [Blockquote](#blockquote)
+    - [Links](#links)
+    - [Images](#images)
+  - [Extended Syntax](#extended-syntax)
+    - [Table](#table)
+    - [Task List](#task-list)
+    - [Emoji](#emoji)
+    - [Comments](#comments)
+    - [Toggle](#toggle)
+    - [Callouts](#callouts)
+    - [Table of Contents](#table-of-contents)
