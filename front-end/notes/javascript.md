@@ -5,42 +5,43 @@
 > 💡 To open up preview<span class="keyword"> cmd shift + V</span> these notes.
 
 ---
+
 💡
 
 > JavaScript is an object-oriented computer programming language commonly used to create interactive effects within web browsers.
+
 ```js
 // double slash to write comments in JavaScript files.
 ```
-***
+
+---
+
 ### Table of Content
-***
+
+---
+
 - [Variables](#variables)
 
 - [Constants](#constants)
 - [Data Types](#data-types)
-  
 - [Dynamic Typing](#dynamic-typing)
-  
 - [Objects](#objects)
-  
 - [Arrays](#arrays)
 - [Functions](#functions)
 
 - [Operator Variations](#operator-variations)
-    
 - [Comparing Operators](#comparing-operators)
-   
 - [Ternary Operator](#ternary-operator)
 - [Conditional Statements](#conditional-statements)
- 
+
 - [Loops](#loops)
-  
 
 ---
 
 # Variables
 
->  KEYWORD: <span class="keyword">let</span>
+> KEYWORD: <span class="keyword">let</span>
+
 - a VARIABLE is a value that can change, depending on conditions or on information passed to the program
 
 ```js
@@ -527,6 +528,7 @@ if (hour >= 6 && hour < 12) {
 ## - switch...case
 
 > **KEYWORD: <span class="Keyword">switch" "case" "break" "default" </span>**
+
 - A switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each switch case.
 
 ```js
@@ -590,12 +592,20 @@ else console.log("unknown User");
 
 ## for
 
+> "i" is short for index and is a common convention to use in for loops. Loop Variable
+
+In `for` loops we need 3 conditions.
+
+1. **Initial Expression**. we initialize the variable "`i`".
+2. **Condition Expression**. we compare the value of "`i`" with something else. this loop will run as long as the value = `true`.
+3. **Increment Expression**. Usually adding +1 to the value of "`i`" until the condition expression is met.
+
 ```js
-for (let variable = #; condition we want to meet; incrementExpression will execute until condition is met){
+for (initialExpression; conditionExpression; incrementExpression){
   statement we want to execute;
 }
 
-// statement("Hello World") will execute until "i" is <5 (0,1,2,3,4)
+// statement("Hello World") will execute until "i" is < 5 (0,1,2,3,4)
 for (let i = 0; i < 5; i++) {
   console.log("hello World");
 }
@@ -607,3 +617,43 @@ OUTPUT:
 (3)"Hello World"
 (4)"Hello World" // after (4) condition is evaluated as false and stop the execution of the statement.
 ```
+
+#### **IN SOME CASES FOR LOOPS NEED TO BE MADE INTO A DECREMENT FORM. STARTING FROM A HIGHER VALUE AND STOPPING AT A SMALLER VALUE.**
+
+```JS
+for (let i = 5; i >= 1; i--) {
+  console.log("hello World");
+}
+
+OUTPUT: 5, 4, 3, 2, 1
+// STARTED AT 5 AND DECREASED BY 1.
+```
+
+## while
+
+> 💡 key difference `while` loops and `for` loops, the loop variable(`i`) is part of the loop variable itself. In `while` loops, we need to declare the variable externally.
+
+> 💡**Variable is being declared outside of the loop fuction so it can be reused by other loop functions.**
+
+```js
+let i = 0; // declared outside of function.
+```
+
+```js
+let i =0;
+
+while (i <= 5) {
+  if (i % 2 !==0) console.log(i);
+  1++;
+}
+
+
+let i = 0; // <- variable is established.
+
+while (i <=5) { // <- first condition is being evaluated (i <= 5)
+  if (i % 2 !==0) console.log(i); // if condition is true the body of the while loop will be executed until condition returns false.
+  1++;// <= finally we need to increment "i".
+}
+```
+
+## do while
